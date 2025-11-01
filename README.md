@@ -1,0 +1,86 @@
+# SEMO Course Registration System
+
+A functional course registration web application built with Bootstrap 5 and vanilla JavaScript.
+
+## Features
+
+✅ **Authentication**
+- Login with hardcoded test credentials
+- Session management (clears on logout)
+- Protected routes
+
+✅ **Course Selection**
+- Browse 10 predefined courses
+- View course details (code, name, credits, description)
+- Responsive card layout
+
+✅ **Shopping Cart**
+- Add/remove courses (maximum 5 courses)
+- Real-time cart updates
+- Credit total calculation
+- Visual indicators for courses in cart
+
+✅ **Registration Confirmation**
+- Summary of selected courses
+- Total credits display
+- Student information
+
+## Test Users
+
+- **Username:** `student1` | **Password:** `student123`
+- **Username:** `student2` | **Password:** `student123`
+
+## How to Use
+
+1. **Open `index.html`** in your web browser
+2. **Login** with one of the test credentials above
+3. **Browse courses** and click "Add to Cart" (max 5 courses)
+4. **Review your cart** in the sidebar
+5. **Click "Confirm Registration"** to see the confirmation page
+
+## Technical Details
+
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Framework:** Bootstrap 5.3.3
+- **Storage:** Browser SessionStorage (no backend)
+- **Design:** SEMO brand colors (Blue: #0033A0, Green: #00A651)
+- **Accessibility:** ARIA labels, keyboard navigation support
+
+## File Structure
+
+```
+site/
+├── index.html          # Login page
+├── courses.html        # Course selection page
+├── confirmation.html   # Registration confirmation
+├── assets/
+│   ├── css/
+│   │   └── styles.css  # Custom styling
+│   └── js/
+│       ├── auth.js     # Authentication logic
+│       ├── login.js    # Login page handlers
+│       ├── cart.js     # Cart management
+│       └── courses.js  # Course listing & cart UI
+└── README.md
+```
+
+## Requirements Met
+
+✅ FR-1: User sign-in with hardcoded credentials  
+✅ FR-2: View 10 predefined courses  
+✅ FR-3: Add to cart (max 5 courses)  
+✅ FR-4: Edit cart (add/remove)  
+✅ FR-5: Confirm registration page  
+✅ FR-6: Display total credits  
+✅ FR-7: Maximum course limit (5)  
+✅ FR-8: Place registration validation  
+✅ FR-9: Reset on logout  
+✅ FR-10: Responsive Bootstrap layout  
+
+## Notes
+
+- All data is stored in browser session storage
+- Cart and session clear on logout or browser close
+- No backend server required - works with file:// protocol
+- Fully responsive for desktop and mobile devices
+

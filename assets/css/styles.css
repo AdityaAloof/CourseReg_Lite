@@ -1,0 +1,357 @@
+:root {
+  --semo-blue: #0033A0;
+  --semo-green: #00A651;
+  --semo-blue-light: #1a4db3;
+  --semo-green-light: #0dbf5f;
+  --semo-blue-gradient: linear-gradient(135deg, #0033A0 0%, #1a4db3 100%);
+  --semo-green-gradient: linear-gradient(135deg, #00A651 0%, #0dbf5f 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 51, 160, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 51, 160, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 51, 160, 0.16);
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+/* Primary buttons use SEMO blue */
+.btn-primary {
+  background: var(--semo-blue-gradient);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--semo-blue-gradient);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.text-primary {
+  color: var(--semo-blue) !important;
+}
+
+/* Success/confirmation uses SEMO green */
+.btn-success {
+  background: var(--semo-green-gradient);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: var(--semo-green-gradient);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.text-success {
+  color: var(--semo-green) !important;
+}
+
+/* Course cards */
+.course-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--semo-blue);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover::before {
+  transform: scaleY(1);
+}
+
+.course-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--semo-blue);
+}
+
+.course-card.in-cart {
+  border-color: var(--semo-green);
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  box-shadow: 0 4px 16px rgba(0, 166, 81, 0.15);
+}
+
+.course-card.in-cart::before {
+  background: var(--semo-green);
+  transform: scaleY(1);
+}
+
+/* Cart sidebar */
+.cart-item {
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.75rem 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Accessible focus states */
+.form-control:focus, .btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 51, 160, 0.25);
+}
+
+/* Login page enhancements */
+.login-container {
+  background: linear-gradient(135deg, rgba(0, 51, 160, 0.05) 0%, rgba(0, 166, 81, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 51, 160, 0.1) 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.login-container::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 166, 81, 0.1) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(20px, -20px) rotate(5deg); }
+}
+
+.login-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-lg);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--semo-blue);
+  box-shadow: 0 0 0 0.25rem rgba(0, 51, 160, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Navbar enhancements */
+.navbar {
+  background: var(--semo-blue-gradient) !important;
+  box-shadow: var(--shadow-md);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+/* Confirmation page */
+.confirmation-badge {
+  background: var(--semo-green-gradient);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.confirmation-badge::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Credit total display */
+.credit-total {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--semo-blue);
+  background: linear-gradient(135deg, rgba(0, 51, 160, 0.1), rgba(0, 166, 81, 0.1));
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Cart enhancements */
+.cart-card {
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.cart-header {
+  background: var(--semo-green-gradient);
+  padding: 1.25rem;
+}
+
+/* Card enhancements */
+.card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Badge enhancements */
+.badge {
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+/* Alert enhancements */
+.alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: var(--shadow-sm);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Loading states */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page transitions */
+.page-enter {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Course code badge */
+.course-code-badge {
+  background: var(--semo-blue-gradient);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  box-shadow: var(--shadow-sm);
+}
+
