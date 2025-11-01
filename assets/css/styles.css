@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-/* Primary buttons use SEMO blue */
+/* Primary buttons use blue */
 .btn-primary {
   background: var(--semo-blue-gradient);
   border: none;
@@ -56,7 +56,7 @@ body {
   color: var(--semo-blue) !important;
 }
 
-/* Success/confirmation uses SEMO green */
+/* Success/confirmation uses green */
 .btn-success {
   background: var(--semo-green-gradient);
   border: none;

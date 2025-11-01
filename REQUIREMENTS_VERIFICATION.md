@@ -77,12 +77,12 @@
 | **NFR-6** | Maintainability: Comments, GitHub | ✅ **PASS** | Code commented, Git initialized |
 | **NFR-7** | Compatibility: Chrome, Firefox, Safari | ✅ **PASS** | Standard HTML/JS/CSS |
 | **NFR-8** | Testing: Unit tests ready | ✅ **READY** | Structure supports unit testing |
-| **NFR-9** | Color Scheme: SEMO Blue & Green | ✅ **PASS** | Blue (#0033A0) and Green (#00A651) used |
+| **NFR-9** | Color Scheme: Blue & Green | ✅ **PASS** | Blue (#0033A0) and Green (#00A651) used |
 | **NFR-10** | Scalability: 2 test users | ✅ **PASS** | Supports student1 and student2 only |
 
 ### Design Requirements
 
-✅ **SEMO Brand Colors:** Blue (#0033A0) and Green (#00A651) consistently used  
+✅ **Brand Colors:** Blue (#0033A0) and Green (#00A651) consistently used  
 ✅ **Bootstrap 5:** Fully responsive framework implemented  
 ✅ **Mobile-First:** Works on desktop (laptop) and mobile (iPhone)  
 ✅ **Accessibility:** ARIA labels, keyboard navigation support  

@@ -4,7 +4,7 @@
 
 **Project Name:** CourseReg Lite  
 **Duration:** 8 Weeks (October 16 - December 11, 2025)  
-**Team:** CyberDefenders (3 members)
+**Team:** 3 members
 
 ## Team Roles
 

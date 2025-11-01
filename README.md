@@ -1,6 +1,6 @@
 # CourseReg Lite
 
-**A minimal course registration web application (MVP) for SEMO students**
+**A minimal course registration web application (MVP) for students**
 
 A functional course registration web application built with Bootstrap 5 and vanilla JavaScript, allowing students to log in, select, and confirm their courses.
 
@@ -45,7 +45,7 @@ A functional course registration web application built with Bootstrap 5 and vani
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Framework:** Bootstrap 5.3.3
 - **Storage:** Browser SessionStorage (no backend)
-- **Design:** SEMO brand colors (Blue: #0033A0, Green: #00A651)
+- **Design:** Brand colors (Blue: #0033A0, Green: #00A651)
 - **Accessibility:** ARIA labels, keyboard navigation support
 
 ## File Structure

@@ -27,7 +27,7 @@ git push -u origin main
 ## Alternative: Using GitHub CLI (if installed)
 
 ```bash
-gh repo create semo-course-registration --public --source=. --remote=origin --push
+gh repo create coursereg-lite --public --source=. --remote=origin --push
 ```
 
 ## Step 3: Verify

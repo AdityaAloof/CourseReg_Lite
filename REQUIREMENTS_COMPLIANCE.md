@@ -44,12 +44,12 @@
 | **NFR-6: Maintainability** | ✅ **COMPLETE** | Code commented, organized structure, GitHub ready |
 | **NFR-7: Compatibility** | ✅ **COMPLETE** | Works in Chrome, Firefox, Safari (latest versions) |
 | **NFR-8: Testing** | ✅ **READY** | Unit test ready structure, usability testing ready |
-| **NFR-9: Color Scheme** | ✅ **COMPLETE** | SEMO Blue (#0033A0) and SEMO Green (#00A651) used throughout |
+| **NFR-9: Color Scheme** | ✅ **COMPLETE** | Blue (#0033A0) and Green (#00A651) used throughout |
 | **NFR-10: Scalability** | ✅ **COMPLETE** | Supports 2 test users (no concurrent handling needed for MVP) |
 
 ### Design Requirements
 
-- ✅ **SEMO Brand Colors**: Blue (#0033A0) and Green (#00A651) consistently used
+- ✅ **Brand Colors**: Blue (#0033A0) and Green (#00A651) consistently used
 - ✅ **Bootstrap 5**: Fully responsive framework implemented
 - ✅ **Mobile-First**: Works perfectly on iPhone and desktop
 - ✅ **Accessibility**: ARIA labels, keyboard navigation support
@@ -90,7 +90,7 @@ site/
 ├── confirmation.html       # Registration confirmation
 ├── assets/
 │   ├── css/
-│   │   └── styles.css      # Custom SEMO styling
+│   │   └── styles.css      # Custom styling
 │   └── js/
 │       ├── auth.js         # Authentication logic
 │       ├── login.js        # Login handlers
