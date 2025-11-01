@@ -6,7 +6,7 @@ Your repository is initialized and ready to push to GitHub!
 
 1. Go to [github.com](https://github.com) and sign in
 2. Click the **+** icon in the top right → **New repository**
-3. Name your repository (e.g., `semo-course-registration`)
+3. Name your repository (e.g., `CourseReg_Lite` or `coursereg-lite`)
 4. Choose **Public** or **Private**
 5. **DO NOT** initialize with README, .gitignore, or license (we already have these)
 6. Click **Create repository**
@@ -17,10 +17,12 @@ After creating the repository, GitHub will show you commands. Use these commands
 
 ```bash
 cd "C:\Users\aloof\OneDrive - Southeast Missouri State University\ASE-Project\site"
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+git remote add origin https://github.com/YOUR_USERNAME/CourseReg_Lite.git
 git branch -M main
 git push -u origin main
 ```
+
+**Recommended Repository Name:** `CourseReg_Lite` (matches project name)
 
 ## Alternative: Using GitHub CLI (if installed)
 

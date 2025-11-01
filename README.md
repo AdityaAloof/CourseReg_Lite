@@ -1,6 +1,8 @@
-# SEMO Course Registration System
+# CourseReg Lite
 
-A functional course registration web application built with Bootstrap 5 and vanilla JavaScript.
+**A minimal course registration web application (MVP) for SEMO students**
+
+A functional course registration web application built with Bootstrap 5 and vanilla JavaScript, allowing students to log in, select, and confirm their courses.
 
 ## Features
 
