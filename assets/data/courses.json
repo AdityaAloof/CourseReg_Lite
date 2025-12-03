@@ -1,0 +1,16 @@
+{
+  "version": "2025.11.25",
+  "refreshedAt": "2025-11-25T00:00:00Z",
+  "courses": [
+    { "code": "CS101", "name": "Introduction to Computer Science", "credits": 3, "description": "Fundamental concepts of programming, algorithms, and data structures." },
+    { "code": "CS201", "name": "Data Structures and Algorithms", "credits": 4, "description": "Advanced data structures, algorithm analysis, and complexity theory." },
+    { "code": "MATH150", "name": "Calculus I", "credits": 4, "description": "Limits, derivatives, and applications of differential calculus." },
+    { "code": "MATH250", "name": "Calculus II", "credits": 4, "description": "Integration techniques, sequences, series, and applications." },
+    { "code": "ENG101", "name": "Composition I", "credits": 3, "description": "Writing, research, and critical thinking skills development." },
+    { "code": "PHYS200", "name": "Physics I", "credits": 4, "description": "Mechanics, thermodynamics, and wave motion fundamentals." },
+    { "code": "HIST101", "name": "World History", "credits": 3, "description": "Survey of major world civilizations and historical developments." },
+    { "code": "BIOL101", "name": "Biology I", "credits": 4, "description": "Cell biology, genetics, and evolution principles." },
+    { "code": "CHEM101", "name": "Chemistry I", "credits": 4, "description": "Atomic structure, bonding, and chemical reactions." },
+    { "code": "PSYC101", "name": "Introduction to Psychology", "credits": 3, "description": "Overview of psychological principles, theories, and research methods." }
+  ]
+}

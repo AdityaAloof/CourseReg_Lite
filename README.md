@@ -40,6 +40,36 @@ A functional course registration web application built with Bootstrap 5 and vani
 4. **Review your cart** in the sidebar
 5. **Click "Confirm Registration"** to see the confirmation page
 
+## Operational Safeguards
+
+### Automated Backups
+- Run the PowerShell helper whenever you need a fresh snapshot of the site directory.
+
+```powershell
+pwsh -File scripts/backup.ps1
+```
+
+The script zips all runtime files (excluding `backups/`, `scripts/`, and `.git/`) into `backups/CourseRegLite-<timestamp>.zip`.
+
+### Authentication Hardening
+- Session inactivity watchers auto-log out users after 15 minutes of no activity.
+- Login attempts are throttled (five failures trigger a five-minute lock). Messages surface remaining attempts to the user.
+- Security events (lockouts, successes) are retained locally for quick inspection via `window.SecurityEvents.getRecentSecurityEvents()` in the console.
+
+### Catalog Resilience
+- Courses load from `assets/data/courses.json` with a 4-second timeout.
+- Successful responses are cached for six hours; if the feed is unreachable the app serves the cached snapshot or a baked-in fallback list and surfaces a banner in `courses.html`.
+
+### Feature Flags
+- Rapid rollback switches live in `assets/js/featureFlags.js`.
+- Toggle them at runtime via the browser console:
+
+```javascript
+FeatureFlags.set('dynamicCatalog', false);   // Serve embedded data only
+FeatureFlags.set('strictAuthGuards', false); // Disable throttling and idle timeout
+FeatureFlags.reset();                        // Restore defaults
+```
+
 ## Technical Details
 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)

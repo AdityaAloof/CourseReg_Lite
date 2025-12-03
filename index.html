@@ -35,26 +35,27 @@
                     </div>
                     
                     <div id="errorMessage" class="alert alert-danger d-none" role="alert"></div>
+                    <div id="statusMessage" class="alert alert-warning d-none" role="status"></div>
                     
                     <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
                         <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
                     </button>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me on this device</label>
+                    </div>
+                    <div class="text-center">
+                        <a href="register.html" class="small">Create an account</a>
+                    </div>
                 </form>
                 
-                <div class="mt-4 pt-4 border-top">
-                    <div class="text-center">
-                        <p class="text-muted small mb-2 fw-semibold">Test Credentials</p>
-                        <div class="d-flex justify-content-center gap-2 flex-wrap">
-                            <span class="badge bg-light text-dark border">student1 / student123</span>
-                            <span class="badge bg-light text-dark border">student2 / student123</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Test credentials removed; users should register an account. -->
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/featureFlags.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
